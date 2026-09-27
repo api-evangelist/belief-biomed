@@ -1,23 +1,61 @@
 aid: belief-biomed
+
 name: Belief Biomed
-description: 'Belief Biomed is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Belief BioMed is a global biotechnology company focused on developing gene therapies for monogenic, degenerative, and malignant diseases.
+  It integrates research, manufacturing, and clinical application of innovative AAV vector platforms, with pipelines in rare genetic diseases,
+  chronic conditions, and commercial products. The company operates in China and the US, with IND clearances and FDA fast‑track designations for
+  candidates such as BBM‑D101 and BBM‑P002.
+
 url: https://raw.githubusercontent.com/api-evangelist/belief-biomed/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- Gene Therapy
+- Clinical Trials
+- Manufacturing
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/belief-biomed-hosts.yml
+- type: DomainSecurity
+  url: security/belief-biomed-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/belief-biomed_stock/
+  url: https://www.beliefbiomed.com/en/index.html
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract found on api.beliefbiomed.com.
+  evidence:
+  - url: https://api.beliefbiomed.com/openapi.json
+    status: 0
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
